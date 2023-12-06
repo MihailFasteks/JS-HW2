@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        const questions=[["У вас хорошее настроение?"], ["Вы любите птичек?"], ["А черепашек?"], ["У вас есть домашнее животное?"], ["Вы были в Испании?"]];
+        let scores=[];
+        let res;
+        for (let i=0;i<questions.length;i++){
+            res=prompt(questions[i]);
+            if (res=="Да"){
+                scores[i]=3;
+            }
+            else if(res=="Нет"){
+                scores[i]=1;
+            }
+            else
+            {
+                scores[i]=0;
+                alert("Вы ввели неверный ответ!");
+            }
+        }
+        document.write("Результаты: ");
+        document.write("<br />");
+            for(let i=0;i<scores.length;i++){
+                document.write("Вопрос # "+(i+1)+" - "+scores[i]+" балл(а)");
+                document.write("<br />");
+            }
+    </script> -->
+    <!-- <script>
+        let invalidSuymbols='1234567890!@#$%^&*()_+-=[]{}|;:,<>/?`~\\"';
+        let userInput=prompt("Введите ФИО: ");
+let current;
+let isOk;
+        for (let i=0;i<userInput.length;i++){
+            current=userInput[i];
+           
+            for (let j=0;j<invalidSuymbols.length;j++){
+                if (current==invalidSuymbols[j]){
+                    isOk=false;
+                    break;
+                }
+            }
+        }
+        if (isOk==false){
+            document.write("Данные введены не корректно!");
+        }
+        else{
+            document.write("Поздравляем! Данные введены корректно!");
+        }
+    </script> -->
+    <!-- <script>
+var address = "http://www.ufa.com.ua/utilites/hdd/out.php?sort=2";
+
+
+var protocolEnd=address.indexOf(":");
+var hostStart=address.indexOf("//") + 2;
+var hostEnd=address.indexOf("/", hostStart);
+var pathStart=hostEnd;
+var pathEnd=address.lastIndexOf("/") + 1;
+var fileStart=address.lastIndexOf("/") + 1;
+var fileEnd=address.indexOf("?", fileStart);
+var queryStart=address.indexOf("?", fileEnd) + 1;
+
+
+var protocol=address.substring(0, protocolEnd);
+var host=address.substring(hostStart, hostEnd);
+var path=address.substring(pathStart, pathEnd);
+var file=address.substring(fileStart, fileEnd);
+var query=address.substring(queryStart);
+
+
+document.write("Протокол:"+protocol+"<br />");
+document.write("Протокол:"+host+"<br />");
+document.write("Протокол:"+path+"<br />");
+document.write("Протокол:"+file+"<br />");
+document.write("Протокол:"+query+"<br />");
+
+    </script> -->
+
+
+
+
+
+    <!-- дз2 -->
+    <!-- task2 -->
+    <script>
+        // let arr1=[1, 2, 3, 4, 5];
+        // let arr2=[3, 4, 5, 6, 7];
+        // function fun1(array1, array2){
+        //     let isOk;
+        //     for (let i=0;i<array2.length;i++){
+        //         isOk=true;
+        //         for (let j=0;j<array1.length;j++){
+        //             if(array1[j]==array2[i]){
+        //                isOk=false;
+        //             }
+        //         }
+        //         if(isOk==true){
+        //             array1+=(", "+array2[i]);
+        //         }
+        //     }
+        //     return array1;
+        //     }
+        //     let arr3=fun1(arr1, arr2);
+        //     for (let i=0;i<arr3.length;i++){
+        //         document.write(arr3[i]+" ");
+        //     }
+
+        // let arr1=[1, 1, 3, 4, 5];
+        // let arr2=[1, 4, 5, 6, 4];
+        // function fun1(array1, array2){
+        //     let isOk;
+        //     let array3=[];
+        //     for (let i=0;i<array2.length;i++){
+        //         isOk=false;
+        //         for (let j=0;j<array1.length;j++){
+        //             if((array1[j]==array2[i])){
+        //                isOk=true;
+        //             }
+        //         }
+        //         if((isOk==true)&&(array3.indexOf(array2[i])<0)){
+        //             array3+=(array2[i]);
+        //         }
+        //     }
+
+        //     return array3;
+        //     }
+        //     let arr3=fun1(arr1, arr2);
+        //     for (let i=0;i<arr3.length;i++){
+        //         document.write(arr3[i]+" ");
+        //     }
+
+        // let arr1=[1, 1, 3, 4, 5];
+        // let arr2=[9, 4, 8, 6, 8];
+        // function fun1(array1, array2){
+        //     let isOk;
+        //     let array3=[];
+        //     for (let i=0;i<array2.length;i++){
+        //         isOk=true;
+        //         for (let j=0;j<array1.length;j++){
+        //             if((array1[j]==array2[i])){
+        //                isOk=false;
+        //             }
+        //         }
+        //         if((isOk==true)&&(array3.indexOf(array2[i])<0)){
+        //             array3+=(array2[i]);
+        //         }
+        //     }
+
+        //     return array3;
+        //     }
+        //     let arr3=fun1(arr1, arr2);
+        //     for (let i=0;i<arr3.length;i++){
+        //         document.write(arr3[i]+" ");
+        //     }
+
+        var fruits = ["apple", "banana", "orange", "kiwi", "grape"];
+        fruits.sort();
+
+
+        function ShowFruits(fruits) {
+            document.write("<ul>");
+            for (var i = 0; i < fruits.length; i++) {
+                document.write("<li>" + fruits[i] + "</li>");
+            }
+            document.write("</ul>");
+        }
+        ShowFruits(fruits);
+        document.write("<br />");
+
+        function findFruit(fruitName) {
+    var lowerCaseFruitName = fruitName.toLowerCase();
+    var index = fruits.indexOf(lowerCaseFruitName);
+    return index;
+        }
+        let foundFruit=findFruit('banana');
+        document.write(foundFruit);
+
+
+    </script>
+</body>
+</html>
